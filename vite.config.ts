@@ -3,9 +3,11 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
   return {
-    base: '/DashBoard-UTBK/',
+    // Relative base './' in production ensures all assets resolve correctly on GitHub Pages
+    // regardless of repo name or case (e.g. /DashBoard-UTBK/, /dashboard-utbk/, or custom domain).
+    base: mode === 'production' ? './' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

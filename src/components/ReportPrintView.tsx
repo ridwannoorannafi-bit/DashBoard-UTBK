@@ -3,6 +3,7 @@ import { Student, PortalUiSettings } from '../types/utbk';
 import { SUBTEST_DEFINITIONS } from '../data/utbkMeta';
 import { DEFAULT_UI_SETTINGS } from '../utils/storage';
 import { Printer, X, GraduationCap, CheckCircle2, Award } from 'lucide-react';
+import { TESLA_LOGO_BANNER } from '../utils/assets';
 
 interface ReportPrintViewProps {
   student: Student;
@@ -65,7 +66,7 @@ export const ReportPrintView: React.FC<ReportPrintViewProps> = ({
             <div className="flex items-center gap-4">
               <div className="w-20 h-20 shrink-0 flex items-center justify-center">
                 <img
-                  src="/assets/aistudio/Dokumen_dari_RNA_462b1175.png"
+                  src={TESLA_LOGO_BANNER}
                   alt="Logo Rumah Belajar Tesla"
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"

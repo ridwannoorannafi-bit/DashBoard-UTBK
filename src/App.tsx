@@ -15,6 +15,7 @@ import { StudentDashboard } from './components/StudentDashboard';
 import { HostDashboard } from './components/HostDashboard';
 import { ReportPrintView } from './components/ReportPrintView';
 import { GraduationCap, ArrowRight, ShieldCheck, User } from 'lucide-react';
+import { TESLA_LOGO_ICON } from './utils/assets';
 
 export default function App() {
   const [students, setStudents] = useState<Student[]>([]);
@@ -225,7 +226,7 @@ export default function App() {
           <div className="flex items-center gap-2.5">
             <div className="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden shrink-0">
               <img
-                src="/assets/aistudio/Dokumen_dari_RNA__1__5243d24d.png"
+                src={TESLA_LOGO_ICON}
                 alt="Logo Tesla"
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"

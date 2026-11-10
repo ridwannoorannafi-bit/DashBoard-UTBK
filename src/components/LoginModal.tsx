@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AuthUser, Student } from '../types/utbk';
 import { INITIAL_HOST } from '../data/initialStudents';
 import { GraduationCap, Lock, User, ShieldCheck, ArrowRight, Eye, EyeOff, Sparkles, CheckCircle2 } from 'lucide-react';
+import { TESLA_LOGO_ICON } from '../utils/assets';
 
 interface LoginModalProps {
   students: Student[];
@@ -119,7 +120,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
 
             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white p-1 rounded-2xl shadow-md shrink-0 flex items-center justify-center overflow-hidden">
               <img
-                src="/assets/aistudio/Dokumen_dari_RNA__1__5243d24d.png"
+                src={TESLA_LOGO_ICON}
                 alt="Logo Tesla Bimbingan Sukses PTN"
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { AuthUser, Student } from '../types/utbk';
 import { GraduationCap, LogOut, ShieldCheck, User, Users, FileText, BarChart3, PlusCircle } from 'lucide-react';
+import { TESLA_LOGO_ICON } from '../utils/assets';
 
 interface NavbarProps {
   user: AuthUser;
@@ -37,7 +38,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-3 shrink-0">
             <div className="w-11 h-11 rounded-2xl bg-white p-0.5 shadow-xs border border-slate-200 flex items-center justify-center shrink-0 overflow-hidden">
               <img
-                src="/assets/aistudio/Dokumen_dari_RNA__1__5243d24d.png"
+                src={TESLA_LOGO_ICON}
                 alt="Logo Rumah Belajar Tesla"
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"

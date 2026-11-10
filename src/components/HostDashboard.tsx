@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Student, TryOutResult, SubtestScoreMap, TutorNote, SubtestKey, PortalUiSettings } from '../types/utbk';
 import { SUBTEST_DEFINITIONS, NATIONAL_AVERAGES } from '../data/utbkMeta';
 import { recalculateEvaluations, createNewStudent, resetToDefaultData, DEFAULT_UI_SETTINGS } from '../utils/storage';
+import { TESLA_LOGO_ICON } from '../utils/assets';
 import { 
   Users, 
   Upload, 
@@ -668,7 +669,7 @@ export const HostDashboard: React.FC<HostDashboardProps> = ({
             <div className="flex items-center gap-3.5">
               <div className="w-14 h-14 rounded-2xl bg-white p-1 shadow-md border border-white/20 flex items-center justify-center shrink-0 overflow-hidden">
                 <img
-                  src="/assets/aistudio/Dokumen_dari_RNA__1__5243d24d.png"
+                  src={TESLA_LOGO_ICON}
                   alt="Logo Rumah Belajar Tesla"
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"

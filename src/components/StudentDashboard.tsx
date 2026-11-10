@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Student, SubtestKey, TryOutResult, PortalUiSettings } from '../types/utbk';
 import { SUBTEST_DEFINITIONS, NATIONAL_AVERAGES } from '../data/utbkMeta';
 import { DEFAULT_UI_SETTINGS } from '../utils/storage';
+import { TESLA_LOGO_ICON } from '../utils/assets';
 import { 
   GraduationCap, 
   TrendingUp, 
@@ -116,7 +117,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-white p-0.5 shadow-sm flex items-center justify-center shrink-0">
                 <img
-                  src="/assets/aistudio/Dokumen_dari_RNA__1__5243d24d.png"
+                  src={TESLA_LOGO_ICON}
                   alt="Rumah Belajar Tesla"
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
