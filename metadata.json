@@ -1,0 +1,6 @@
+{
+  "name": "AMBIS UTBK - Dashboard Progress Siswa Intensif",
+  "description": "Sistem monitoring progress Try Out dan evaluasi subtest UTBK SNBT untuk siswa intensif dan host bimbingan belajar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
