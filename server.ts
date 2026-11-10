@@ -221,8 +221,19 @@ async function startServer() {
       server: { middlewareMode: true },
       appType: 'spa'
     });
+
+    // Support requests prefixed with /DashBoard-UTBK seamlessly in dev
+    app.use((req, res, next) => {
+      if (req.url.startsWith('/DashBoard-UTBK')) {
+        req.url = req.url.replace(/^\/DashBoard-UTBK/, '') || '/';
+      }
+      next();
+    });
+
     app.use(vite.middlewares);
   } else {
+    // In production, serve both /DashBoard-UTBK and root
+    app.use('/DashBoard-UTBK', express.static(path.join(__dirname, 'dist')));
     app.use(express.static(path.join(__dirname, 'dist')));
     app.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, 'dist', 'index.html'));
